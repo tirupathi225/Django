@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music PLayer CSS + HTML</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}" >
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- <div class="player">
+        <div id="info" class="info">
+            <span class="artist">Flume</span>
+            <span class="name">Say it</span>
+            <div class="progress-bar">
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div id="control-panel" class="control-panel">
+            <div class="album-art"></div>
+            <div class="controls">
+                <div class="prev"></div>
+                <div id="play" class="play"></div>
+                <div class="next"></div>
+            </div>
+        </div>
+    </div> -->
+    <p>Actual music : {{ id_music }}</p>
+    <audio controls>
+        <source src="{% static 'Booba - PGP.mp3' %}" type="audio/mpeg">
+    </audio>    
+</body>
+<script src = "{% static 'script.js' %}"></script>
+
+</html>

@@ -1,0 +1,12 @@
+body{
+    background: url("images/paper_texture_picture_169367.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', 'cursive';
+}

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music PLayer CSS + HTML</title>
+    <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    {% for music in all_musics %}
+        <h3>{{ music.auteur }} - {{ music.titre }}</h3>
+        <audio controls>
+            <source src="/static/{{music.auteur}} - {{music.titre}}.mp3" type="audio/mpeg">
+        </audio>
+
+    {% empty %}
+        <p>Aucun son</p>
+    {% endfor %}
+
+</body>
+<script src="{% static 'script.js' %}"></script>
+
+</html>
